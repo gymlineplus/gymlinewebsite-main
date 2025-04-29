@@ -12,19 +12,19 @@ export default function StatsSection() {
         {/* <h1 className="text-center uppercase font-semibold text-9xl mb-5">State</h1> */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6  ">
           <StatCard
-            value="500+"
+            value="1500+"
             title="Gyms Built"
             description="Successfully designed and equipped over 500 gyms across India, catering to commercial, home, and specialized fitness centers."
           />
 
           <StatCard
-            value="200+"
+            value="1400+"
             title="Happy Clients"
             description="Overlapping coverage and uninterrupted service across multiple networks."
           />
 
           <StatCard
-            value="2000+"
+            value="25000+"
             title="Products Delivered "
             description="From high-quality gym equipment to reliable fitness solutions, we ensure reliable delivery, every time."
           />

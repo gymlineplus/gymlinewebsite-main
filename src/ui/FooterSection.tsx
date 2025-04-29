@@ -19,12 +19,12 @@ function Demo() {
         socialLinks={[
           {
             icon: <Instagram className="h-5 w-5" />,
-            href: "https://instagram.com",
+            href: "https://www.instagram.com/gymline.in?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
             label: "Instagram",
           },
           {
             icon: <Facebook className="h-5 w-5" />,
-            href: "https://twitter.com",
+            href: "https://www.facebook.com/GymLine.IN/",
             label: "Facebook",
           },
         ]}

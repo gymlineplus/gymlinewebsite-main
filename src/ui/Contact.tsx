@@ -18,8 +18,6 @@ import {
   MapPin,
   Clock,
   Send,
-  Linkedin,
-  Twitter,
   Facebook,
   Instagram,
 } from "lucide-react";
@@ -82,8 +80,8 @@ export default function ContactSection() {
                 Get in Touch
               </h2>
               <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                We would love to hear from you. Fill out the form below or reach out
-                directly.
+                We would love to hear from you. Fill out the form below or reach
+                out directly.
               </p>
             </div>
           </div>
@@ -105,7 +103,8 @@ export default function ContactSection() {
                     </div>
                     <h3 className="text-xl font-medium">Message Sent!</h3>
                     <p className="text-center text-muted-foreground">
-                      Thank you for reaching out. We will get back to you shortly.
+                      Thank you for reaching out. We will get back to you
+                      shortly.
                     </p>
                   </div>
                 ) : (
@@ -183,7 +182,8 @@ export default function ContactSection() {
                     <div>
                       <h3 className="font-medium">Phone</h3>
                       <p className="text-sm text-muted-foreground">
-                        +91 9205899041
+                        +91 9205899041 | <strong>Helpline No</strong> - +91
+                        9311771888
                       </p>
                     </div>
                   </div>
@@ -192,7 +192,7 @@ export default function ContactSection() {
                     <div>
                       <h3 className="font-medium">Address</h3>
                       <p className="text-sm text-muted-foreground">
-                        Okhla Phase II 
+                        Okhla Phase II, Industrial Area,
                         <br />
                         New Delhi - 110020
                         <br />
@@ -207,7 +207,7 @@ export default function ContactSection() {
                       <p className="text-sm text-muted-foreground">
                         Monday - Saturday: 10:30 AM - 7:30 PM
                         <br />
-                        Saturday & Sunday: Closed
+                        Weekly Off
                       </p>
                     </div>
                   </div>
@@ -224,22 +224,20 @@ export default function ContactSection() {
                 <CardContent>
                   <div className="flex space-x-4">
                     <Button variant="outline" size="icon" asChild>
-                      <a href="#" aria-label="LinkedIn">
-                        <Linkedin className="h-4 w-4" />
-                      </a>
-                    </Button>
-                    <Button variant="outline" size="icon" asChild>
-                      <a href="#" aria-label="Twitter">
-                        <Twitter className="h-4 w-4" />
-                      </a>
-                    </Button>
-                    <Button variant="outline" size="icon" asChild>
-                      <a href="#" aria-label="Facebook">
+                      <Link
+                        href="https://www.facebook.com/GymLine.IN/"
+                        target="_blank"
+                        aria-label="Facebook"
+                      >
                         <Facebook className="h-4 w-4" />
-                      </a>
+                      </Link>
                     </Button>
                     <Button variant="outline" size="icon" asChild>
-                      <Link target="_blank" href="www.instagram.com" aria-label="Instagram">
+                      <Link
+                        target="_blank"
+                        href="https://www.instagram.com/gymline.in?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                        aria-label="Instagram"
+                      >
                         <Instagram className="h-4 w-4" />
                       </Link>
                     </Button>

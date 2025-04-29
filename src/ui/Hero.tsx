@@ -23,7 +23,7 @@ export default function AuroraBackgroundDemo() {
         <div className="font-extralight text-base md:text-4xl dark:text-neutral-200 py-4">
         Build Your Ultimate Workout Space Today!
         </div>
-        <button className="bg-black hover:bg-white hover:border-2 border-black animate-pulse hover:shadow-2xl hover:text-black  dark:bg-white rounded-full w-fit text-white dark:text-black px-4 py-2">
+        <button className="bg-black hover:bg-white hover:border-2 border-black hover:shadow-2xl hover:text-black  dark:bg-white rounded-full w-fit text-white dark:text-black px-4 py-2">
             Get Started
         </button>
       </motion.div>
