@@ -1,19 +1,58 @@
+"use client"
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+/* eslint-disable import/no-unresolved */
+
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { allProducts } from "@/lib/products";
-import { cardioSeriesProducts } from "@/lib/CardioProductss";
-import { }
+import { allCardioProducts, Product } from "@/lib/CardioProductss";
+import { NextPage } from "next";
+import { useState, useEffect } from "react";
 
-export default function Page({ params }) {
-  const sku = params.sku;
-  // Remove parseInt since SKUs are strings, not numbers
-  const product = cardioSeriesProducts.find((item) => item.sku === sku);
+interface PageParams {
+  sku: string;
+}
 
-  // Handle case where product is not found
+const Page: NextPage<{ params: PageParams }> = ({ params }) => {
+  const [product, setProduct] = useState<Product | undefined>(undefined);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const getProduct = () => {
+      try {
+        const { sku } = params; // Access the "sku" directly
+        const foundProduct = allCardioProducts.find((item) => item.sku === sku);
+        setProduct(foundProduct);
+      } catch (err: any) {
+        setError(err.message || "Failed to load product");
+      } finally {
+        setLoading(false);
+      }
+    };
+    getProduct();
+  }, [params]);
+
+  if (loading) {
+    return (
+      <div className="w-full flex items-center justify-center min-h-[calc(100vh-88px)]">
+        <p>Loading product...</p>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="w-full flex items-center justify-center min-h-[calc(100vh-88px)]">
+        <p className="text-red-500">Error: {error}</p>
+      </div>
+    );
+  }
+
   if (!product) {
     return (
       <div className="w-full flex items-center justify-center min-h-[calc(100vh-88px)]">
-        <p>Product not found for SKU: {sku}</p>
+        <p>Product not found for SKU: {params.sku}</p>
       </div>
     );
   }
@@ -79,14 +118,6 @@ export default function Page({ params }) {
       </main>
     </div>
   );
-}
+};
 
-export async function generateMetadata({ params }) {
-  const sku = params.sku;
-  const product = allProducts.find((item) => item.sku === sku);
-
-  return {
-    title: product ? `${product.name} | Your Store` : "Product Not Found",
-    description: product?.description || "Product not found",
-  };
-}
+export default Page;

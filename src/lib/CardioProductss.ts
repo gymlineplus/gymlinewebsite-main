@@ -1,4 +1,4 @@
-// @/lib/cardioSeriesProducts.ts
+
 
 export type Product = {
     id: number;
@@ -10,11 +10,11 @@ export type Product = {
     featured: boolean;
   };
   
-  export const cardioSeriesProducts: Product[] = [
+  export const Treadmills: Product[] = [
     {
       id: 1,
       sku: "X9001A",
-      name: "Gymine Commercial Treadmill X9001A",
+      name: "Gymline Commercial Treadmill X9001A",
       image: "https://gymlineplus.com/cdn/shop/files/IMG-20240401-WA0035.jpg?v=1711982776",
       category: "Treadmills",
       description: "Commercial grade treadmill with advanced features for intense cardio workouts.",
@@ -47,6 +47,8 @@ export type Product = {
       description: "As an industry expert, I can confidently say the Gymlineplus Commercial Curve Treadmill is a durable and efficient workout machine. With its self-powered, zero maintenance technology and liquid crystal display, it offers high intensity workouts for all fitness levels. Featuring a curved design and resistance levels from 1 to 6, this treadmill is perfect for running, walking, lunges, and more. With a maximum user weight of 180kg and a crawler type belt, it's a top choice for fitness enthusiasts.",
       featured: false,
     },
+];
+    export const ExcerciseBikes: Product[] = [
     {
       id: 5,
       sku: "X9107",
@@ -83,6 +85,8 @@ export type Product = {
       description: "Experience a smooth and challenging workout with the Gymlineplus Spinning Bike. With a 24kg main wheel weight and belt driven technology, it offers a realistic cycling experience. The sturdy flat elliptical and round stainless steel tube design can support up to 150kg user weight. Built with high-quality aluminum alloy, it weighs 68kg and measures 1088*560*1045-1300mm.",
       featured: false,
     },
+  ];
+    export const EllipticalTrainers: Product[] = [
     {
       id: 9,
       sku: "LDE-13",
@@ -101,4 +105,9 @@ export type Product = {
       description: "The Gymline Plus Commercial Cross Trainer is a self-powered generator with 8 pre-set exercise programs. Its automatic electromagnetic resistance system allows for a maximum user weight of 149kg. The LED screen displays speed, calories, distance, time, and heart rate, while the joystick allows for easy resistance control. With a net weight of 162kg and dimensions of 2093*749*1643mm, this elliptical trainer offers a professional, efficient, and effective workout experience.",
       featured: false,
     },
+  ];
+  export const allCardioProducts: Product[] = [
+    ...Treadmills,
+    ...ExcerciseBikes,
+    ...EllipticalTrainers,
   ];

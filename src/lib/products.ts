@@ -1,8 +1,3 @@
-// // @/lib/products.ts
-// export { eclipsSeriesProducts } from "./eclipsSeriesProducts";
-// export { endurancePlusSeriesProducts } from "./endurancePlusSeriesProducts";
-// export { alexenderSeriesProducts } from "./alexenderSeriesProducts";
-// export { ironSeriesProducts } from "./ironSeriesProducts";
 
 // Define a common product type for consistency (optional, for TypeScript)
 export type Product = {

@@ -28,14 +28,14 @@ const page = () => {
         </div>
         {/* Eclipse Series Products */}
         {eclipsSeriesProducts.length > 0 && (
-          <div className="flex items-center justify-between mt-8 mb-4">
+          <div id="eclipse"  className="flex scroll-smooth items-center justify-between mt-8 mb-4">
             <h3 className="text-xl font-semibold">Eclipse Series</h3>
             <Link href="#" className="text-blue-500 hover:underline">
               View All
             </Link>
           </div>
         )}
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-8">
+        <div  className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-8">
           {eclipsSeriesProducts.slice(0, 8).map((product) => (
             <Card
               key={product.id}

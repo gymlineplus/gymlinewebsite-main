@@ -6,11 +6,20 @@ const demoData: Gallery4Props = {
     "At Gymline Plus, we take pride in delivering top-tier fitness solutions to a diverse range of clients, from home gyms to commercial fitness centers. Explore our portfolio of completed projects, showcasing our commitment to quality, innovation, and customer satisfaction.",
   items: [
     {
+      id: "badman-gym",
+      title: "Badman Gym - Bhopal's Biggest gym",
+      description:
+        "Explore how Next.js has become the go-to framework for building full-stack React applications, offering features like server components, file-based routing, and automatic optimization.",
+      href: "https://www.instagram.com/gymlineplus",
+      image:
+        "/badman-gym.mp4",
+    },
+    {
       id: "kenzo-vashi",
       title: "Kenzo Vashi: A Fitness Haven",
       description:
         "Explore how shadcn/ui revolutionized React component libraries by providing a unique approach to component distribution and customization, making it easier for developers to build beautiful, accessible applications.",
-      href: "",
+      href: "https://www.instagram.com/gymlineplus",
       image:
         "/kenzovashi.mp4",
     },
@@ -19,7 +28,7 @@ const demoData: Gallery4Props = {
       title: "Taiso Panvel",
       description:
         "Discover how Tailwind CSS transformed the way developers style their applications, offering a utility-first approach that speeds up development while maintaining complete design flexibility.",
-      href: "https://www.instagram.com/p/DFo53fvStT0/",
+      href: "https://www.instagram.com/gymlineplus",
       image:
         "/taisopanvel.mp4",
     },
@@ -28,7 +37,7 @@ const demoData: Gallery4Props = {
       title: "MOF 74",
       description:
         "Learn how Astro's innovative 'Islands Architecture' and zero-JS-by-default approach is helping developers build faster websites while maintaining rich interactivity where needed.",
-      href: "https://astro.build",
+      href: "https://www.instagram.com/gymlineplus",
       image:
         "/mof74.mp4",
     },
@@ -37,19 +46,11 @@ const demoData: Gallery4Props = {
       title: "Kenzo Chembur",
       description:
         "See how React continues to shape modern web development with its component-based architecture, enabling developers to build complex user interfaces with reusable, maintainable code.",
-      href: "https://react.dev",
+      href: "https://www.instagram.com/gymlineplus",
       image:
         "/chembur.mp4",
     },
-    {
-      id: "badman-gym",
-      title: "Badman Gym - Bhopal's biggest gym",
-      description:
-        "Explore how Next.js has become the go-to framework for building full-stack React applications, offering features like server components, file-based routing, and automatic optimization.",
-      href: "https://nextjs.org",
-      image:
-        "/badman-gym.mp4",
-    },
+    
   ],
 };
 

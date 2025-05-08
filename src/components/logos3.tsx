@@ -49,12 +49,6 @@ const Logos3 = ({
       className: "w-20",
     },
     {
-      id: "indofit",
-      description: "indofit",
-      image: "/indofit-logos.jpg", // fixed
-      className: "w-40",
-    },
-    {
       id: "kenzo-fitness",
       description: "Kenzo fitness",
       image: "/kenzo-fitnesslogo.png", // fixed name with space

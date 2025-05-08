@@ -4,16 +4,16 @@ import { TestimonialCarousel } from "@/components/ui/testimonial";
 const TESTIMONIAL_DATA = [
   {
     id: 1,
-    name: "Vinit",
+    name: "VinRaymon Singhit",
     avatar: "https://randomuser.me/api/portraits/men/1.jpg",
     description:
-      "Amazing experience working with this team! The results exceeded my expectations.",
+      "Good machines with the best mechanism.",
   },
   {
     id: 2,
-    name: "Hardeep",
+    name: "Daljeet Kaur",
     avatar: "https://randomuser.me/api/portraits/women/1.jpg",
-    description: "Highly recommended! Great service and professional approach.",
+    description: "Best imported gym equipment",
   },
   {
     id: 3,

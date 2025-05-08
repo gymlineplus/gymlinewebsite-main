@@ -1,13 +1,20 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { allProducts } from "@/lib/products";
+import { allProducts, Product } from "@/lib/product"; // Assuming your product data is in src/lib/product.ts
+import { NextPage } from 'next';
 
-export default function Page({ params }) {
-  const sku = params.sku;
-  // Remove parseInt since SKUs are strings, not numbers
-  const product = allProducts.find((item) => item.sku === sku);
+interface PageParams {
+  sku: string;
+}
 
-  // Handle case where product is not found
+interface PageProps {
+  params: PageParams;
+}
+
+const ProductDetailPage: NextPage<PageProps> = ({ params }) => {
+  const { sku } = params;
+  const product: Product | undefined = allProducts.find((item) => item.sku === sku);
+
   if (!product) {
     return (
       <div className="w-full flex items-center justify-center min-h-[calc(100vh-88px)]">
@@ -51,12 +58,12 @@ export default function Page({ params }) {
               </p>
             </div>
 
-            {/* Add to Cart */}
+            {/* Get expert advice button */}
             <div className="flex items-center">
               <a
                 href={`https://wa.me/919311771888?text=Hi, I'm interested in the ${encodeURIComponent(
                   product.name
-                )}.`}
+                )} with SKU: ${product.sku}.`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -77,14 +84,6 @@ export default function Page({ params }) {
       </main>
     </div>
   );
-}
+};
 
-export async function generateMetadata({ params }) {
-  const sku = params.sku;
-  const product = allProducts.find((item) => item.sku === sku);
-
-  return {
-    title: product ? `${product.name} | Your Store` : "Product Not Found",
-    description: product?.description || "Product not found",
-  };
-}
+export default ProductDetailPage;

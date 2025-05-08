@@ -36,7 +36,7 @@ const GymSetup = () => {
                   />
                 </div>
               </DialogTrigger>
-              <DialogContent className="max-w-3xl p-4">
+              <DialogContent title="gym-setup" className="max-w-3xl p-4">
                 {selectedImage && (
                   <Image
                     src={selectedImage}

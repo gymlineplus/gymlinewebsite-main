@@ -20,6 +20,7 @@ import {
   Send,
   Facebook,
   Instagram,
+  Navigation,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -245,6 +246,51 @@ export default function ContactSection() {
                 </CardContent>
               </Card>
             </div>
+          </div>
+          
+          {/* Map Section */}
+          <div className="mx-auto max-w-5xl mt-8">
+            <Card className="overflow-hidden border-0 shadow-md">
+              <CardContent className="p-0">
+                <div className="relative">
+                  {/* Map Container */}
+                  <div className="w-full h-[350px] overflow-hidden">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.2675237769354!2d77.26938757428917!3d28.531677588655658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce15ab27a9b1d%3A0x7efddf5f49ea9309!2sGymline%20Plus%20Private%20Limited!5e0!3m2!1sen!2sin!4v1745990488969!5m2!1sen!2sin"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title="GymLine Plus Location"
+                      className="w-full h-full filter grayscale-[50%]"
+                    ></iframe>
+                  </div>
+                  
+                  {/* Map Overlay Card */}
+                  <div className="absolute top-8 left-8 max-w-[280px] bg-background/95 backdrop-blur-sm p-5 rounded-lg shadow-lg border border-border">
+                    <div className="flex flex-col space-y-3">
+                      <div className="flex items-center space-x-2">
+                        <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center">
+                          <MapPin className="h-4 w-4 text-primary" />
+                        </div>
+                        <h3 className="font-semibold text-lg">Gymline</h3>
+                      </div>
+                      <p className="text-sm text-muted-foreground">
+                        Okhla Phase II, Industrial Area, New Delhi - 110020
+                      </p>
+                      <Button size="sm" className="flex items-center gap-2" asChild>
+                        <Link href="https://maps.app.goo.gl/7HDTf9c73AnPmF6f8" target="_blank">
+                          <Navigation className="h-4 w-4" />
+                          <span>Get Directions</span>
+                        </Link>
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

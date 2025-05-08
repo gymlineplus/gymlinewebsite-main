@@ -1,12 +1,17 @@
+"use client"
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+/* eslint-disable import/no-unresolved */
+
+
 import React from "react";
 import Image from "next/image";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import {
-  eclipsSeriesProducts,
-  endurancePlusSeriesProducts,
-  alexenderSeriesProducts,
-  ironSeriesProducts,
-} from "@/lib/products";
+  Treadmills,
+  ExcerciseBikes,
+  EllipticalTrainers,
+} from "@/lib/CardioProductss";
 
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
@@ -18,7 +23,7 @@ const page = () => {
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-              Strength Equipment
+              Cardio Equipment
             </h2>
             <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               Elevate your heart rate and boost your endurance with our premium
@@ -26,17 +31,17 @@ const page = () => {
             </p>
           </div>
         </div>
-        {/* Eclipse Series Products */}
-        {eclipsSeriesProducts.length > 0 && (
+        {/* hunter Series Products */}
+        {Treadmills.length > 0 && (
           <div className="flex items-center justify-between mt-8 mb-4">
-            <h3 className="text-xl font-semibold">Eclipse Series</h3>
+            <h3 className="text-xl font-semibold">Our Treadmills</h3>
             <Link href="#" className="text-blue-500 hover:underline">
               View All
             </Link>
           </div>
         )}
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-8">
-          {eclipsSeriesProducts.slice(0, 8).map((product) => (
+          {Treadmills.slice(0, 8).map((product) => (
             <Card
               key={product.id}
               className="overflow-hidden border-0 shadow-sm transition-all hover:shadow-md"
@@ -54,7 +59,7 @@ const page = () => {
                   </Badge>
                 )}
               </div>
-              <Link href={`/strength/${product.sku}`}>
+              <Link href={`/cardio/${product.sku}`}>
                 <CardContent className="p-4">
                   <div className="flex items-start justify-between">
                     <div>
@@ -76,16 +81,16 @@ const page = () => {
           ))}
         </div>
         {/* Endurance Plus Series Products */}
-        {endurancePlusSeriesProducts.length > 0 && (
-          <div className="flex items-center justify-between mt-8 mb-4">
-            <h3 className="text-xl font-semibold">Endurance Plus Series</h3>
+        {ExcerciseBikes.length > 0 && (
+          <div id="spin-bikes" className="flex items-center justify-between mt-8 mb-4">
+            <h3 className="text-xl font-semibold">Excercise Bikes</h3>
             <Link href="#" className="text-blue-500 hover:underline">
               View All
             </Link>
           </div>
         )}
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-8">
-          {endurancePlusSeriesProducts.slice(0, 8).map((product) => (
+          {ExcerciseBikes.slice(0, 8).map((product) => (
             <Card
               key={product.id}
               className="overflow-hidden border-0 shadow-sm transition-all hover:shadow-md"
@@ -103,7 +108,7 @@ const page = () => {
                   </Badge>
                 )}
               </div>
-              <Link href={`/strength/${product.sku}`}>
+              <Link href={`/cardio/${product.sku}`}>
                 <CardContent className="p-4">
                   <div className="flex items-start justify-between">
                     <div>
@@ -124,17 +129,17 @@ const page = () => {
             </Card>
           ))}
         </div>
-        {/* Alexender Series Products */}
-        {alexenderSeriesProducts.length > 0 && (
-          <div className="flex items-center justify-between mt-8 mb-4">
-            <h3 className="text-xl font-semibold">Alexender Series</h3>
+        {/* Hulk Series Products */}
+        {EllipticalTrainers.length > 0 && (
+          <div id="cross-trainer" className="flex items-center justify-between mt-8 mb-4">
+            <h3 className="text-xl font-semibold">Elliptical Trainers</h3>
             <Link href="#" className="text-blue-500 hover:underline">
               View All
             </Link>
           </div>
         )}
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-8">
-          {alexenderSeriesProducts.slice(0, 4).map((product) => (
+          {EllipticalTrainers.slice(0, 4).map((product) => (
             <Card
               key={product.id}
               className="overflow-hidden border-0 shadow-sm transition-all hover:shadow-md"
@@ -152,56 +157,7 @@ const page = () => {
                   </Badge>
                 )}
               </div>
-              <Link href={`/strength/${product.sku}`}>
-                <CardContent className="p-4">
-                  <div className="flex items-start justify-between">
-                    <div>
-                      <p className="text-sm font-medium text-gray-500">
-                        {product.category}
-                      </p>
-                      <h3 className="font-semibold text-lg mt-1 line-clamp-2">
-                        {product.name}
-                      </h3>
-                    </div>
-                  </div>
-                  <p className="line-clamp-1 text-sm text-gray-500 mt-2">
-                    {product.description}
-                  </p>
-                </CardContent>
-              </Link>
-              <CardFooter className="p-4 pt-0" />
-            </Card>
-          ))}
-        </div>
-        {/* Iron Series Products */}
-        {ironSeriesProducts.length > 0 && (
-          <div className="flex items-center justify-between mt-8 mb-4">
-            <h3 className="text-xl font-semibold">Iron Series</h3>
-            <Link href="#" className="text-blue-500 hover:underline">
-              View All
-            </Link>
-          </div>
-        )}
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-8">
-          {ironSeriesProducts.slice(0, 4).map((product) => (
-            <Card
-              key={product.id}
-              className="overflow-hidden border-0 shadow-sm transition-all hover:shadow-md"
-            >
-              <div className="relative aspect-square overflow-hidden">
-                <Image
-                  src={product.image || "/placeholder.svg"}
-                  alt={product.name}
-                  fill
-                  className="object-cover transition-transform hover:scale-105"
-                />
-                {product.featured && (
-                  <Badge className="absolute left-2 top-2 bg-red-500 hover:bg-red-600">
-                    Featured
-                  </Badge>
-                )}
-              </div>
-              <Link href={`/strength/${product.sku}`}>
+              <Link href={`/cardio/${product.sku}`}>
                 <CardContent className="p-4">
                   <div className="flex items-start justify-between">
                     <div>
